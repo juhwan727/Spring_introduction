@@ -37,6 +37,9 @@ public class MemberService {
                 .ifPresent(m -> {
                     throw new IllegalStateException("이미 존재하는 회원입니다.");      // 부정 또는 부적절한 때에 메서드가 불려 간 것을 나타내는 오류
                 });
+        // IllegalStateException 부정 또는 올바르지 않은 때에 메소드가 불려 간 것
+        // void ifPresent()는 Optional 객체가 값을 가지고 있으면 실행 값이 없으면 넘어감
+        // Boolean isPresent()는 Optional 객체가 값을 가지고 있다면 true, 값이 없다면 false 리턴
     }
 
     /**
