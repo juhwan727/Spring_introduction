@@ -15,6 +15,9 @@ public class MemberController {
 
     private MemberService memberService;
 
+    // @Autowired는 스프링이 연관된 객체를 스프링 컨테이너에서 찾아서 넣어줌
+    // 이렇게 객체 의존관계를 외부에서 넣어주는 것을 DI (Dependency Injection), 의존성 주입이라 함
+
     // 필드 주입
     /*@Autowired
     private MemberService memberService;*/

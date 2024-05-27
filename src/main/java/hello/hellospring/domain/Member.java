@@ -8,6 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class Member {
 
+    // JPA
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;

@@ -13,6 +13,7 @@ class MemoryMemberRepositoryTest {
 
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
+    // 각 테스트가 종료 될 때 마다 이 기능을 실행
     @AfterEach
     public void afterEach() {
         repository.clearStore();

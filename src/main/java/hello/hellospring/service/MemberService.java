@@ -14,11 +14,15 @@ import java.util.Optional;
 @Transactional
 public class MemberService {
 
-//    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    // 기존에는 회원 서비스가 메모리 회원 리포지토리를 직접 생성
+    // private final MemberRepository memberRepository = new MemoryMemberRepository();
 
+    // 회원 서비스 코드를 DI 가능하게 변경
     MemberRepository memberRepository;
+
     // MemberServiceTest에 있는 MemberRepository가 같은 인스턴스이게 하기 위함
-//    @Autowired
+    // 1개만 있으면 @Autowired 는 생략 가능
+    // @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
